@@ -1,3 +1,9 @@
+nanomsg (0.5-0~zentyal1) trusty; urgency=medium
+
+  * New upstream release
+
+ -- Jenkins Zentyal (Zentyal GPG) <jenkins@zentyal.com>  Fri, 24 Apr 2015 09:57:44 +0200
+
 nanomsg (0.4~beta+dfsg-3) unstable; urgency=medium
 
   * Add the debug package.
