@@ -1,0 +1,9 @@
+The upstream source of this package contains several RFCs implemented
+by nanomsg which are licensed under the restrictions of BCP78 and
+thus, DFSG non-free.
+
+In order to generate a DFSG-clean version of the upstream source, use
+`uscan --repack` with devscripts >= 2.14.2.  Note, the name that uscan
+will save the package under is incorrect because of devscripts bug
+#753619, and will need to be renamed to the correct format
+(nanomsg_0.4~beta+dfsg.orig.tar.gz, for example).

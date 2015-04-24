@@ -1,0 +1,3 @@
+version=3
+opts=dversionmangle=s/\+dfsg//,uversionmangle=s/(\d)[_\.\-\+]?((RC|rc|pre|dev|beta|alpha)\d*)$/$1~$2/,filenamemangle=s/.+\/v?(\d\S*)\.tar\.gz/nanomsg_$1\+dfsg\.orig\.tar\.gz/ \
+  https://github.com/nanomsg/nanomsg/tags .*/v?(\d\S*)\.tar\.gz

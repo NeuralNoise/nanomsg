@@ -1,0 +1,16 @@
+Description: Disable test that has a transient failure.
+Author: Harlan Lieberman-Berg <H.LiebermanBerg@gmail.com>
+Bug: https://github.com/nanomsg/nanomsg/issues/75
+Forwarded: not-needed
+
+
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -429,7 +429,6 @@
+     tests/inproc \
+     tests/inproc_shutdown \
+     tests/ipc \
+-    tests/ipc_shutdown \
+     tests/tcp \
+     tests/tcp_shutdown
+ 

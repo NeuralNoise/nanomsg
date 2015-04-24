@@ -1,12 +1,84 @@
-Source: libnanomsg
-Maintainer: Ivo Vachkov <ivachkov@xi-group.com>
-Section: misc
-Priority: optional
+Source: nanomsg
+Priority: extra
+Section: libs
+Maintainer: Harlan Lieberman-Berg <H.LiebermanBerg@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), dh-autoreconf
 Standards-Version: 3.9.5
-Build-Depends: debhelper (>= 9)
+Homepage: http://nanomsg.org/
+Vcs-Git: git://anonscm.debian.org/collab-maint/nanomsg.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/nanomsg.git
+
+Package: libnanomsg-dev
+Section: libdevel
+Architecture: any
+Depends: libnanomsg0 (= ${binary:Version}), ${misc:Depends}
+Description: nanomsg development files
+ nanomsg is a socket library that provides several common
+ communication patterns. It aims to make the networking layer fast,
+ scalable, and easy to use. Implemented in C, it works on a wide range
+ of operating systems with no further dependencies.
+ .
+ The communication patterns, also called "scalability protocols", are
+ basic blocks for building distributed systems. By combining them you
+ can create a vast array of distributed applications. The following
+ scalability protocols are currently available:
+ .
+    PAIR - simple one-to-one communication
+    BUS - simple many-to-many communication
+    REQREP - allows one to build clusters of stateless services
+             to process user requests
+    PUBSUB - distributes messages to large sets of interested subscribers
+    PIPELINE - aggregates messages from multiple sources and 
+               load balances them among many destinations
+    SURVEY - allows one to query state of multiple applications in a single go
+ .
+ This package contains the development files for nanomsg.
 
 Package: libnanomsg0
-Architecture: amd64
-Depends: ${shlibs:Depends}, ${misc:Depends}, 
-Description: This is package for libnanomsg
- The following package contains libnanomsg
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: high-performance implementation of scalability libraries
+ nanomsg is a socket library that provides several common
+ communication patterns. It aims to make the networking layer fast,
+ scalable, and easy to use. Implemented in C, it works on a wide range
+ of operating systems with no further dependencies.
+ .
+ The communication patterns, also called "scalability protocols", are
+ basic blocks for building distributed systems. By combining them you
+ can create a vast array of distributed applications. The following
+ scalability protocols are currently available:
+ .
+    PAIR - simple one-to-one communication
+    BUS - simple many-to-many communication
+    REQREP - allows one to build clusters of stateless services
+             to process user requests
+    PUBSUB - distributes messages to large sets of interested subscribers
+    PIPELINE - aggregates messages from multiple sources and 
+               load balances them among many destinations
+    SURVEY - allows one to query state of multiple applications in a single go 
+
+Package: libnanomsg0-dbg
+Section: debug
+Architecture: any
+Depends: libnanomsg0 (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
+Description: high-performance implementation of scalability libraries - debug symbols
+ nanomsg is a socket library that provides several common
+ communication patterns. It aims to make the networking layer fast,
+ scalable, and easy to use. Implemented in C, it works on a wide range
+ of operating systems with no further dependencies.
+ .
+ The communication patterns, also called "scalability protocols", are
+ basic blocks for building distributed systems. By combining them you
+ can create a vast array of distributed applications. The following
+ scalability protocols are currently available:
+ .
+    PAIR - simple one-to-one communication
+    BUS - simple many-to-many communication
+    REQREP - allows one to build clusters of stateless services
+             to process user requests
+    PUBSUB - distributes messages to large sets of interested subscribers
+    PIPELINE - aggregates messages from multiple sources and 
+               load balances them among many destinations
+    SURVEY - allows one to query state of multiple applications in a single go 
+ .
+ This package contains the debug symbols for libnanomsg.

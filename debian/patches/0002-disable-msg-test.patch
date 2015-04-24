@@ -1,0 +1,14 @@
+Description: Disable transiently failing test.
+Author: Harlan Lieberman-Brg <H.LiebermanBerg@gmail.com>
+Forwarded: not-needed
+
+--- a/Makefile.am
++++ b/Makefile.am
+@@ -445,7 +445,6 @@
+     tests/term \
+     tests/timeo \
+     tests/iovec \
+-    tests/msg \
+     tests/prio \
+     tests/poll \
+     tests/device \
